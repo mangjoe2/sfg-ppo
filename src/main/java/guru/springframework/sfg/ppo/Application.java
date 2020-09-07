@@ -1,9 +1,6 @@
 package guru.springframework.sfg.ppo;
 
-import guru.springframework.sfg.ppo.controllers.ConstructorInjectedController;
-import guru.springframework.sfg.ppo.controllers.MyController;
-import guru.springframework.sfg.ppo.controllers.PropertyInjectedController;
-import guru.springframework.sfg.ppo.controllers.SetterInjectedController;
+import guru.springframework.sfg.ppo.controllers.*;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
@@ -14,6 +11,10 @@ public class Application {
 	public static void main(String[] args) {
 
 		ApplicationContext ctx = SpringApplication.run(Application.class, args);
+		System.out.println();
+		System.out.println("-------- English");
+		I18nController i18nController = (I18nController) ctx.getBean("i18nController");
+		System.out.println(i18nController.sayHello());
 
 		MyController myController = (MyController) ctx.getBean("myController");
 
