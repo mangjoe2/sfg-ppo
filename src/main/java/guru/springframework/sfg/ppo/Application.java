@@ -2,6 +2,7 @@ package guru.springframework.sfg.ppo;
 
 import ch.qos.logback.core.net.SyslogOutputStream;
 import guru.springframework.sfg.ppo.controllers.*;
+import guru.springframework.sfg.ppo.examplebeans.FakeDataSource;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
@@ -15,10 +16,9 @@ public class Application {
 		System.out.println();
 
 		MyController controller = (MyController) ctx.getBean("myController");
-		System.out.println(controller.sayHello());
-		System.out.println(ctx.getBean(PropertyInjectedController.class).detGreeting());
-		System.out.println(ctx.getBean(SetterInjectedController.class).detGreeting());
-		System.out.println(ctx.getBean(ConstructorInjectedController.class).detGreeting());
+		FakeDataSource fakeDataSource =  (FakeDataSource) ctx.getBean(FakeDataSource.class);
+
+		System.out.println(fakeDataSource.getUser());
 
 	}
 }
