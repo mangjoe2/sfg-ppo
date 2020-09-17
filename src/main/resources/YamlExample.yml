@@ -1,0 +1,36 @@
+#This is a comment
+
+name: John
+
+names: #Comment
+  - John
+  - Paul
+  - Ringo
+
+pound_sign: "#"
+
+book:
+  author: Joseph Mangazie
+  publisher: random house
+
+truth: yes
+
+another_truth: True
+
+more_true: true
+
+false: no #No, false, FALSE
+
+string_val: "This is it's quote"
+
+colon string: "My course: one Two three"
+
+include_new_lines:
+  asdf asdf asdf
+  ijjkj kknvkn lpp
+  ygfhhg ljkhe  jlbj
+
+ignore_new_lines: >
+  this is
+  one long
+  String
