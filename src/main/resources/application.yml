@@ -3,3 +3,11 @@ guru:
     username: Mangazie
     password: joseph
     url: wiyaou.yahoo.com
+
+--- #File seperation
+
+spring:
+  profiles: de
+guru:
+  jms:
+    username: MangazieJAguarLe PANTHERE
